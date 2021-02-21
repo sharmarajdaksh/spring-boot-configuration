@@ -1,0 +1,15 @@
+app.name: My app
+app.description: Welcome to ${app.name}
+
+my:
+  greeting: Hello TEST
+  list: one,two,three
+  map: {host: "localhost", port: "123"}
+
+db:
+  connection: {host: "localhost", port: "123"}
+  user: user
+  password: password
+
+  # Actuator expose all endpoints. NEVER IN PROD
+management.endpoints.web.exposure.include: "*"

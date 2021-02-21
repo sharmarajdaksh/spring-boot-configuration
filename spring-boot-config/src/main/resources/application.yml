@@ -1,0 +1,18 @@
+app.name: My app
+app.description: Welcome to ${app.name}
+
+my:
+  list: one,two,three
+  map: {host: "localhost", port: "123"}
+
+db:
+  connection: {host: "localhost", port: "123"}
+  user: user
+  password: password
+
+  # Actuator expose all endpoints. NEVER IN PROD
+management.endpoints.web.exposure.include: "*"
+
+spring.cloud.config.uri: http://localhost:8888
+# Ties name to spring-boot-config.yml in the config server config source
+spring.application.name: spring-boot-config
